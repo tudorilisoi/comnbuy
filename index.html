@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<lang="en">
-    <html>
+
+    <html lang='en'>
 
     <head>
         <title>Combbuy</title>
@@ -24,19 +24,42 @@
                 </a>
             </nav>
         </header>
-        
+
         <section class="landingpage">
             <h1> COMPARE AND BUY</h1>
             <p>Search, compare, price match and stay informed on laptop prices and deals</p>
-            <button>COMPARE</button>
+            <button type="submit">COMPARE</button>
         </section>
 
-        <section class="serachpage">
+        <section class="searchpage">
             <main role="main">
-                
+                <div class='col-6 bestbuy'> 
+                    <h2> BESTBUY </h2>
+                    <form class="js-searchBestbuy-form">
+                        <input type="text" id="site-search" name="bestbuy laptop search" placeholder="search for laptop ..." aria-label="Search through Bestbuy stock"> 
+                        <button type="submit">Search</button>
+                        <div class="js-search-results bestbuy"> 
+                            <ul class="comparison-list">
+                                
+                            </ul>
+                        </div>
+                    </form>        
+                </div>     
+                <div class='col-6 walmart'> 
+                    <h2> WALMART</h2>
+                    <form class="js-searchWalmart-form">
+                        <input type="text" id="site-search" name="walmart laptop search" placeholder="search for laptop ..." aria-label="Search through Walmart stock">
+                        <button type="submit">Search</button>
+                        <div class="js-search-results walmart"> 
+                            <ul class="comparison-list">
+                                
+                            </ul>
+                        </div>    
+                    </form>        
+                </div>
             </main>
         </section>        
-        <script src="index.js"></script>
+
     
     </body>
 

@@ -5,7 +5,7 @@
 }
 
 section {
-  height: 900px;
+  height: 800px;
 }
 
 nav {
@@ -15,4 +15,24 @@ nav {
 nav h1 {
   margin-top: 25px;
 }
+
+.col-6 {
+  float: left;
+}
+
+.bestbuy, .walmart {
+  width: 300px;
+  height: 500px;
+}
+
+.bestbuy {
+  position: absolute;
+  left: 30%;
+}
+
+.walmart {
+  position: absolute;
+  left: 60%;
+}
+
 
