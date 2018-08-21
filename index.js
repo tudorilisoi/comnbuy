@@ -19,11 +19,12 @@ function getDataFromApi() {
 
 
   if (search == "bestbuy") {
-    searchUrl = bestBuySearch + "(search=" + searchTerm + ")";
+    //searchUrl = bestBuySearch + "(search=laptop+" + searchTerm + ")";
+    searchUrl = bestBuySearch + "(search=" + encodeURIComponent('laptop ' + searchTerm) + ")";
     jsonDataType = 'json';
   }
   else {
-    searchUrl = walMartSearch + 'query=' + searchTerm + '&format=json&apiKey=9puezpg9ppwzytwy7grqvr64';
+    searchUrl = walMartSearch + 'query=' + encodeURIComponent('laptop ' + searchTerm) + '&format=json&apiKey=9puezpg9ppwzytwy7grqvr64';
     jsonDataType = 'jsonp';
   }
 
@@ -98,7 +99,7 @@ function watchSubmit() {
     searchTerm = queryTarget.val();
     // clear out the input
     queryTarget.val("");
-    getDataFromApi(displaySearchData);
+    getDataFromApi(displaySearchData); //function call, function invocation
   });
 
   $('.js-searchWalmart-form').submit(event => {
