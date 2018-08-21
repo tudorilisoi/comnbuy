@@ -1,66 +1,98 @@
 <!DOCTYPE html>
 
-    <html lang='en'>
+<html lang='en'>
 
-    <head>
-        <title>Combbuy</title>
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-        <meta charset="utf-8">
-        <meta name="description" content="comparing prices on laptops before buying them">
-    
-        <link href="index.css" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i" rel="stylesheet">
-    
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="index.js"></script>
+<head>
+    <title>Combbuy</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="description" content="comparing prices on laptops before buying them">
 
-    </head>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i" rel="stylesheet">
 
-    <body>
-        <header role="banner"> 
-            <nav role="#">
-                <a id="logo" href="#">
-                    <span>COMNBUY</span>
-                </a>
-            </nav>
-        </header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
 
-        <section class="landingpage">
-            <h1> COMPARE AND BUY</h1>
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="#">
+            <a id="logo" href="#">
+                <span>COMBUY</span>
+            </a>
+        </nav>
+    </header>
+
+    <section class="landingpage">
+        <div class="calltoaction">
+            <h1> COMPARE N' BUY</h1>
             <p>Search, compare, price match and stay informed on laptop prices and deals</p>
-            <button type="submit">COMPARE</button>
-        </section>
+            <button type="submit" class="comparebutton">
+                <a href="#compare">COMPARE</a>
+            </button>
+        </div>
+    </section>
 
-        <section class="searchpage">
-            <main role="main">
-                <div class='col-6 bestbuy'> 
-                    <h2> BESTBUY </h2>
-                    <form class="js-searchBestbuy-form">
-                        <input type="text" id="site-search" name="bestbuy laptop search" placeholder="search for laptop ..." aria-label="Search through Bestbuy stock"> 
-                        <button type="submit">Search</button>
-                        <div class="js-search-results bestbuy"> 
-                            <ul class="comparison-list">
-                                
-                            </ul>
-                        </div>
-                    </form>        
-                </div>     
-                <div class='col-6 walmart'> 
-                    <h2> WALMART</h2>
-                    <form class="js-searchWalmart-form">
-                        <input type="text" id="site-search" name="walmart laptop search" placeholder="search for laptop ..." aria-label="Search through Walmart stock">
-                        <button type="submit">Search</button>
-                        <div class="js-search-results walmart"> 
-                            <ul class="comparison-list">
-                                
-                            </ul>
-                        </div>    
-                    </form>        
-                </div>
-            </main>
-        </section>        
+    <section class="searchpage" id="compare">
+            <div class='col-6 row bestbuy'>
+                <h2> BESTBUY </h2>
+                <form class="js-searchBestbuy-form" method="post" action="#">
+                    <input type="text" id="site-search" list="browsers" name="best buy laptop search" placeholder="search for laptop ..." aria-label="Search through Bestbuy stock">
+                        <datalist id="browsers">
+                            <option value="ASUS">
+                            <option value="Acer">
+                            <option value="Dell">
+                            <option value="Lenovo">
 
-    
-    </body>
+                            <option value="MacBook">
+                            <option value="MacBook Pro">
+                            <option value="Samsung">
+                            <option value="Sony">
+                            <option value="Toshiba">
+                            <option value="MSI">    
+                        </datalist>
+                    <button class="searchbuttons" type="submit" >Search</button>
+                    <div class="js-searchbestbuy-results">
+                        <ul class="bestbuycomparisonlist">
 
-    </html>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        
+            <div class='col-6 row walmart'>
+                <h2> WALMART</h2>
+                <form class="js-searchWalmart-form" method="post" action="#">
+                    <input type="text" id="site-search" list="browsers" name="walmart laptop search" placeholder="search for laptop ..." aria-label="Search through Walmart stock">
+                        <datalist id="browsers">
+                            <option value="ASUS">
+                            <option value="Acer">
+                            <option value="Dell">
+                            <option value="Lenovo">
+                            <option value="MacBook">
+                            <option value="MacBook Pro">
+                            <option value="Samsung">
+                            <option value="Sony">
+                            <option value="Toshiba">
+                            <option value="MSI">    
+                        </datalist>
+                    <button class="searchbuttons" type="submit">Search</button>
+                    <div class="js-searchwalmart-results">
+                        <ul class="walmartcomparisonlist">
+
+                        </ul>
+                    </div>
+                </form>
+            </div>
+    </section>
+
+    <footer>
+        <div class="footerbox"> 
+            <p> &#9400 BootcampCracker 2018</p>
+        </div>
+    </footer>
+</body>
+
+</html>

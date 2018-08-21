@@ -1,38 +1,337 @@
+/***** WEB PAGE GENERAL SETTINGS *****/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 15px;
+}
+
+body, html, .main {
+  height: 100%;
+}
+
+body {
+  position: relative;
 }
 
 section {
   height: 800px;
+  box-shadow: #007ac1;
+  min-height: 100%;
 }
+
+/***** NAVIGATION BAR *****/
 
 nav {
   height: 100px;
+  color: whitesmoke;
+  background-color: #007ac1;
 }
 
-nav h1 {
-  margin-top: 25px;
+#logo {
+  position: absolute;
+  top: 2%;
+  left: 3%;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  margin-top: 15px;
+}
+
+a:visited {
+  color: whitesmoke;
+}
+
+a span {
+  font-size: 30px;
+}
+
+/***** MAIN PART *****/
+
+.calltoaction {
+  position: absolute;
+  top: 35%;
+  left: 33%;
+}
+
+.calltoaction > p {
+  text-align: center;
+}
+
+.calltoaction h1 {
+  font-size: 50px;
+  margin-bottom: 10%;
+  color: #ff9a3b;
+  text-align: center;
+}
+
+.calltoaction p {
+  font-size: 20px;
+  margin-bottom: 10%;
+  color: black;
+}
+
+.comparebutton {
+  height: 50px;
+  width: 200px;
+  background-color: #ff9a3b;
+  color: whitesmoke;
+  border: none;
+  border-radius: 2%;
+  position: absolute;
+  left: 30%;
+}
+
+.comparebutton a {
+  transition-delay: 2s;
+  font-size: 20px;
+}
+
+/***** SEARCH FORMS *****/
+
+/*** form ***/
+
+.searchpage {
+  overflow: auto;
 }
 
 .col-6 {
   float: left;
 }
 
-.bestbuy, .walmart {
-  width: 300px;
-  height: 500px;
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-.bestbuy {
-  position: absolute;
-  left: 30%;
-}
-
+.bestbuy,
 .walmart {
-  position: absolute;
-  left: 60%;
+  width: 50%;
+  height: 700px;
+
 }
+
+h2 {
+  color: #007ac1;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-size: 40px;
+  text-align: center;
+}
+
+.js-searchbestbuy-results {
+  clear: both;
+
+}
+
+.js-searchwalmart-results {
+  clear: both;
+
+}
+
+/*** inputs ***/
+
+#site-search {
+  height: 30px;
+  width: 300px;
+  margin-left: 25%;
+  margin-bottom: 5%;
+  padding-left: 3%;
+}
+
+/*** buttons ***/
+
+.searchbuttons {
+  height: 30px;
+  width: 100px;
+  background-color: #ff9a3b;
+  color: whitesmoke;
+  border: none;
+  border-radius: 2%;
+}
+
+/*** search result items ***/
+
+ul {
+  list-style-type: none;
+}
+
+.bestbuycomparisonlist > li {
+  margin-bottom: 2%;
+}
+
+.walmartcomparisonlist > li {
+  margin-bottom: 2%;
+}
+
+.comparison-item {
+  height: 100px;
+  width: 400px;
+  margin-left: 25%;
+  border: 1px solid #007ac1;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 2%;
+  padding: 2%;
+}
+
+.resultcolumn {
+  float: left;
+  width: 46%;
+}
+
+.resultcolumn li {
+ padding-bottom: 5%;
+}
+
+.subresultscolumn {
+  float: left;
+}
+
+.bestbuycomparisonlist p {
+  width: 380px;
+  text-align: justify;
+  margin-left: 25%;
+}
+
+.walmartcomparisonlist p {
+  width: 380px;
+  text-align:justify;
+  margin-left: 25%;
+}
+
+footer {
+  height: 100px;
+  background-color: #ff9a3b;
+  color: whitesmoke; 
+  clear: both;
+  position: absolute;
+  bottom: 0;
+}
+
+.footerbox {
+  height: 100px;
+  background-color: #ff9a3b;
+  color: whitesmoke; 
+}
+
+.footerbox > p{
+  padding-top: 2.2%;
+  padding-left: 2.3%;
+}
+
+/***** MEDIA QUERRIES *****/
+
+
+
+@media all and (min-width: 320px) and (max-width: 479px) { 
+
+/* FIRST PAGE */
+
+  #logo {
+    top: 4%;
+  }
+
+  a span {
+    font-size: 20px;
+  }
+
+  .calltoaction {
+    left: 0;
+  }
+
+  .calltoaction h1 {
+    font-size: 30px;
+    margin-bottom: 10%;
+  }
+
+  .calltoaction p {
+    font-size: 17px;
+    padding: 5%;
+  }
+
+  .comparebutton {
+    left: 37%;
+    width: 100px;
+  } 
+
+  .comparebutton > a {
+    font-size: 15px;
+  }
+
+/* SECOND PAGE */
+
+  h2 {
+    font-size: 20px;
+    margin-top: 100px;
+    
+  }
+
+  form {
+    display: inline;
+  }
+
+  #site-search {
+    height: 35px;
+    width: 100px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 21%;
+    border: 1px solid grey;
+    border-radius: 3px;
+  }
+
+  .searchbuttons {
+    width: 100px;
+    margin-left: 20%;
+    margin-bottom: 15%;
+  }
+
+  .footerbox > p{
+    padding-top: 10%;
+  }
+
+  .comparison-item {
+    margin-left: 20%;
+  }
+
+}
+
+
+@media all and (min-width: 480px) and (max-width: 767px){ 
+
+  .comparebutton {
+    left: 35%;
+  }
+
+  .calltoaction {
+    left: 15%;
+  } 
+
+}
+@media all and (min-width: 768px) and (max-width: 959px) { 
+  
+
+  .calltoaction {
+    left: 15%;
+  }
+
+ }
+@media all and (min-width: 960px) and (max-width: 1199px) { 
+  
+  .calltoaction {
+    left: 23%;
+  }
+
+ }
+@media all and (min-width:1200px){ ... }
+
+
+
+
 
 
